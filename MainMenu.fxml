@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="600.0" stylesheets="@checkoutSimulator.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StaffTraining.MainMenuController">
+  <items>
+    <AnchorPane fx:id="topAnchorPane" minHeight="300.0" minWidth="606.0" prefHeight="300.0" prefWidth="606.0" stylesheets="@checkoutSimulator.css">
+         <children>
+            <VBox fx:id="topVBox" layoutX="30.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="562.0" spacing="10.0" stylesheets="@checkoutSimulator.css">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Main Menu">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="titleLabel" text="Staff Training Checkout Simulator">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectCheckoutLabel" prefHeight="32.0" prefWidth="202.0" text="Please select Checkout Type:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Button fx:id="cashOnlyButton" mnemonicParsing="false" onAction="#cashOnlyButtonClicked" prefHeight="53.0" prefWidth="130.0" text="Cash Only">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="cardOnlyButton" mnemonicParsing="false" onAction="#cardOnlyButtonPressed" prefHeight="51.0" prefWidth="130.0" text="Card Only">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane fx:id="bottomAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="605.0" stylesheets="@checkoutSimulator.css">
+         <children>
+            <Button fx:id="exitButton" layoutX="481.0" layoutY="152.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="32.0" prefWidth="103.0" text="Exit Program">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewProductsButton" contentDisplay="CENTER" layoutX="46.0" layoutY="72.0" mnemonicParsing="false" onAction="#viewProductsButtonClicked" prefHeight="45.0" prefWidth="155.0" text="View Product Page">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="showTotalItemsTF" editable="false" layoutX="210.0" layoutY="149.0" />
+            <Label layoutX="49.0" layoutY="23.0" prefHeight="35.0" prefWidth="211.0" text="Stock Control">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="itemsInStockBTN" layoutX="46.0" layoutY="146.0" mnemonicParsing="false" onAction="#totalItemsSum" prefHeight="27.0" prefWidth="149.0" text="View Items in Stock">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></AnchorPane>
+  </items>
+</SplitPane>

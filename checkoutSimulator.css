@@ -1,0 +1,8 @@
+.root{
+    -fx-background-color: darkGray;
+}
+
+.button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
